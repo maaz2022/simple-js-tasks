@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="">Name</label>
+    <input type="text">
+    
+<br>
+    <label for="">Test1 :</label>
+    <input type="number" id="Test1">
+<br>
+    <label for="">Test2 :</label>
+    <input type="number" id="Test2">
+<br>
+    <label for="">Test3 :</label>
+    <input type="number" id="Test3">
+<br>
+    <input type="submit" onclick="CalcGrade()" value="Calculate Grade">
+    <p id="result"></p>
+
+    <script>
+
+        function CalcGrade(){
+
+            const Test1 = parseFloat(document.getElementById("Test1").value);
+            const Test2 = parseFloat(document.getElementById("Test2").value);
+            const Test3 = parseFloat(document.getElementById("Test3").value);
+
+            const avgScore = (Test1 + Test2 + Test3)/3;
+
+            let Grade = "";
+
+            if(avgScore >=90){
+                Grade ="A";
+            }
+            else if(avgScore >= 80){
+                Grade ="B";
+            }
+            else if(avgScore >= 70){
+                Grade ="C";
+            }
+            else if(avgScore >= 60){
+                Grade ="D";
+            }
+            else {
+                Grade ="F";
+            }
+
+            const result = document.getElementById("result");
+            result.textContent = `Grade is: ${Grade}`;
+        }
+    </script>
+</body>
+</html>

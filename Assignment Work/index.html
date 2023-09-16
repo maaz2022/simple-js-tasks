@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p onmousedown="getCoords (event)">Click anywhere on this sen-
+    
+        tence to see the x and y coordinates of the mouse. Clear the
+        
+        alert and try again to see the numbers change.</p>
+</body>
+    <script>
+function getCoords (event){ 
+    var x = event.clientX;
+    var y = event.clientY;
+    alert("X: " + x + " , Y: "+ y);
+    }
+    </script>
+</html>
